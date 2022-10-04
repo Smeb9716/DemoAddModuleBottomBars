@@ -20,7 +20,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ScannerAndroid"
 include ':app'
-include ':code-scanner-master'
-include ':lib'
+include ':SmoothBottomBar'
 include ':bottom-navigation-bar'
 include ':pager-bottom-tab-strippp'

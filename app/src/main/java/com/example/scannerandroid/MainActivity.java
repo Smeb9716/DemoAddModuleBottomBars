@@ -1,9 +1,12 @@
 package com.example.scannerandroid;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import me.ibrahimsn.lib.OnItemSelectedListener;
+import me.ibrahimsn.lib.SmoothBottomBar;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageNavigationView;
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
@@ -15,7 +18,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         showBottomTabStrip();
+        showSmoothBottomBar();
 
+
+    }
+
+    private void showSmoothBottomBar() {
+        // Link web : https://github.com/ibrahimsn98/SmoothBottomBar
+        // Link git : https://github.com/ibrahimsn98/SmoothBottomBar.git
+        // Add module : folder lib
+        // Clone project : folder app
+
+
+        SmoothBottomBar smoothBottomBar = findViewById(R.id.bottomBar);
+        smoothBottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public boolean onItemSelect(int pos) {
+                Toast.makeText(MainActivity.this, "SmoothBottomBar : "+pos, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
 
     }
 
