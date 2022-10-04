@@ -1,0 +1,22 @@
+ext {
+
+    libraryName = 'PagerBottomTabStrip'
+    libraryDescription = 'An navigation bar for Android'
+
+    publishedGroupId = 'me.majiajie'
+    artifact = 'pager-bottom-tab-strip'
+
+    siteUrl = 'https://github.com/tyzlmjj/PagerBottomTabStrip'
+    scmUrl = 'github.com/tyzlmjj/PagerBottomTabStrip.git'
+
+    libraryVersion = "1.1"
+
+    developerId = 'tyzlmjj'
+    developerName = 'Ma JiaJie'
+    developerEmail = 'tyzl931019@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+}
+
+//apply from: 'https://raw.githubusercontent.com/tyzlmjj/Gradle/master/MavenCentral/publish_module.gradle'
