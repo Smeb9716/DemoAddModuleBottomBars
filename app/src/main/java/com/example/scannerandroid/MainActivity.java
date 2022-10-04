@@ -10,6 +10,7 @@ import me.ibrahimsn.lib.SmoothBottomBar;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageNavigationView;
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
+import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +56,18 @@ public class MainActivity extends AppCompatActivity {
                 .addItem(newItem(R.drawable.ic_favorite_gray_24dp, R.drawable.ic_favorite_teal_24dp, "Favorites"))
                 .addItem(newItem(R.drawable.ic_restore_gray_24dp, R.drawable.ic_restore_teal_24dp, "Recents"))
                 .build();
+
+        navigationController.addTabItemSelectedListener(new OnTabItemSelectedListener() {
+            @Override
+            public void onSelected(int index, int old) {
+                Toast.makeText(MainActivity.this, "BottomTabStrip : "+index, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRepeat(int index) {
+
+            }
+        });
 
     }
 
